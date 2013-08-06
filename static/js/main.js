@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(){
             self.ws.send(JSON.stringify(data));
         }
 
-        self.call = function invoke(action, args) {
+        self.invoke = function invoke(action, args) {
             var data = {
                 'type': 'call',
                 'call': {
@@ -39,18 +39,18 @@ document.addEventListener("DOMContentLoaded", function(){
     client = new GroovyClient("ws://" + window.location.host + "/ws/client/dummyClientId");
 
     $("#prev").addEventListener('click', function(){
-        client.call("prev");
+        client.invoke("prev");
     });
 
     $("#play").addEventListener('click', function(){
-        client.call("play");
+        client.invoke("play");
     });
 
     $("#pause").addEventListener('click', function(){
-        client.call("pause");
+        client.invoke("pause");
     });
 
     $("#next").addEventListener('click', function(){
-        client.call("next");
+        client.invoke("next");
     });
 });
