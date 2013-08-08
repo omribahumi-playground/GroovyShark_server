@@ -3,10 +3,10 @@ import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "lib"))
 
-import tornado.ioloop
-import tornado.web
 import argparse
 import yaml
+import tornado.ioloop
+import tornado.web
 from handlers import *
 
 def main():
@@ -24,6 +24,7 @@ def main():
             (r"/ws/(server|client)/?", GroovyWebSocketHandler),
             (r"/login/?", FacebookGraphLoginHandler),
             (r"/logout/?", LogoutHandler),
+            (r"/static", tornado.web.RedirectHandler, {"url": "/static/"}),
             (r"/static/(.*)", tornado.web.StaticFileHandler,
                 {"path": os.path.join(os.path.dirname(__file__), "static"),
                  "default_filename": "index.html"})
