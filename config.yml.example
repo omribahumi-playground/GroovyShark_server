@@ -1,0 +1,4 @@
+tornado_settings:
+    facebook_api_key: ""
+    facebook_secret: ""
+    cookie_secret: ""

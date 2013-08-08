@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function(){
         };
     }
 
-    client = new GroovyClient("ws://" + window.location.host + "/ws/client/dummyClientId");
+    client = new GroovyClient("ws://" + window.location.host + "/ws/client/");
 
     $("#refresh").addEventListener('click', function(){
         client.invoke("getCurrentSong", null, function(song){
