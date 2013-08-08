@@ -1,3 +1,5 @@
+settings:
+    port: 8888
 tornado_settings:
     facebook_api_key: ""
     facebook_secret: ""

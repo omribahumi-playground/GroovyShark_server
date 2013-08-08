@@ -33,7 +33,7 @@ def main():
         **config['tornado_settings']
     )
 
-    application.listen(8888)
+    application.listen(config['settings']['port'])
     tornado.ioloop.IOLoop.instance().start()
 
 if __name__ == "__main__":
