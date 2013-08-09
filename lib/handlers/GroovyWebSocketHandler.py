@@ -1,3 +1,4 @@
+import json
 import tornado.websocket
 
 # dictionary containing {'clientId' => [websocket, ...], ...}
